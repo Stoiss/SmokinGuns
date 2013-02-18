@@ -4139,12 +4139,12 @@ static void CG_DrawBuyMenu( void ) {
 					return;
 				}
 			} else {
-			if(item->giTag == PW_BELT && cg.snap->ps.powerups[PW_BELT])
-				return;
-			if(item->giType == IT_ARMOR && cg.snap->ps.stats[STAT_ARMOR])
-				return;
-			if(item->giTag == PW_SCOPE && cg.snap->ps.powerups[PW_SCOPE])
-				return;
+				if(item->giTag == PW_BELT && cg.snap->ps.powerups[PW_BELT])
+					return;
+				if(item->giType == IT_ARMOR && cg.snap->ps.stats[STAT_ARMOR])
+					return;
+				if(item->giTag == PW_SCOPE && cg.snap->ps.powerups[PW_SCOPE])
+					return;
 			}
 
 			trap_SendConsoleCommand(va("cg_buy %s\n", item->classname));
